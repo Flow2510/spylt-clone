@@ -1,14 +1,14 @@
-UI clone du site Spylt Milk, réalisé dans un but éducatif afin de travailler des animations modernes et des interactions fluides.
+UI clone du site Spylt Milk (Awwwards winner), réalisé dans un but éducatif afin de travailler des animations modernes et des interactions fluides.
 
 Projet non-officiel — aucune affiliation avec Spylt Milk.
+
+Projet en cours
 
 ✨ Focus
 
 Animations UI avancées
 
 Transitions fluides et micro-interactions
-
-Reproduction fidèle du rythme et du motion design
 
 🛠️ Stack
 

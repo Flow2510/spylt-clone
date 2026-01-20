@@ -1,0 +1,74 @@
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url('https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/677bc442e480f9dca98be8a6_Group%2051994.png'), #222123;
+    background-size: 185%;
+    background-position: 50% 120%;
+    overflow: hidden;
+    
+
+    &__wrapper{
+        background: #faeade;
+        color: #523122;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+
+        &-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &-title{
+            font-size: 3rem;
+            font-family: "antonio", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -.35vw;
+            line-height: 100%;
+        }
+
+        &-subtitle{
+            font-size: 3rem;
+            font-family: "antonio", sans-serif;
+            text-transform: uppercase;
+            color: #fce1cd;
+            background: #a26833;
+            line-height: 120%;
+            padding: 0 0.2rem 0.2rem;
+            letter-spacing: -.35vw;
+            border: 1px solid #fce1cd;
+            transform: rotateZ(-2deg);
+        }
+
+        &-text{
+            width: 80%;
+            padding: 2rem 0;
+            line-height: 120%;
+            font-weight: 400;
+        }
+
+        &-button{
+            padding: 0.8rem 2.8rem;
+            border-radius: 9999px;
+            border: 1px solid #e3a458;
+            background: #e3a458;
+            font-size: 1rem;
+            font-family: "antonio", sans-serif;
+            text-transform: uppercase;
+            color: inherit;
+            font-weight: 700;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+}
