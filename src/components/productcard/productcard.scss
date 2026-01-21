@@ -1,0 +1,50 @@
+.product-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+
+    &__background{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__back{
+        width: 100%;
+        position: absolute;
+        bottom: 3rem;
+        left: 0;
+        display: block;
+        padding: 0 1rem;
+    }
+
+    &__bottle{
+        position: relative;
+        width: 60%;
+        transform: translateY(1.8rem);
+        display: block;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    &__title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        font-size: 1.5rem;
+        font-family: "antonio", sans-serif;
+        letter-spacing: -.1vw;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 105%;
+        color: #faeade;
+    }
+}

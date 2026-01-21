@@ -12,9 +12,6 @@ function App() {
       <Hero />
       <Cta />
       <Products />
-      <div className='test'>
-
-      </div>
     </>
   )
 }
