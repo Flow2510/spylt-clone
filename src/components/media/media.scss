@@ -1,10 +1,10 @@
 @keyframes rotate {
-    0%{
-        transform: rotateZ(0);
-    }
-    100%{
-        transform: rotateZ(360);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .media{
@@ -19,7 +19,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: -1;
     }
 
     &__video{
@@ -31,8 +30,9 @@
         }
 
         &-image{
-            max-width: 125px;
-            animation: rotate 2s infinite;
+            max-width: 115px;
+            display: block;
+            animation: rotate 20s linear infinite;
         }
 
         &-content{
@@ -45,8 +45,8 @@
 
         &-circle{
             position: absolute;
-            width: 4.5rem;
-            height: 4.5rem;
+            width: 4.3rem;
+            height: 4.3rem;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 99999px;
         }
@@ -54,11 +54,63 @@
         &-icon{
             position: absolute;
             color: white;
+            font-size: 0.65rem;
         }
     }
 
     &__reviews{
-        height: 100vh;
-        background: white;
+        position: relative;
+        z-index: 1;
+        background: #faeade;
+    }
+
+    &__reviews-wrapper{
+        min-height: 30vh;
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20.5vw;
+        color: #222123;
+        letter-spacing: -.4vw;
+        text-transform: uppercase;
+        font-family: "Antonio", sans-serif;
+        line-height: 105%;
+        font-weight: 700;
+    }
+
+    &__gallery{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-button{
+            position: sticky;
+            top: calc(100vh - 5rem);
+            z-index: 10;
+            width: fit-content;
+            padding: 0.83rem 3.18rem;
+            font-size: 1rem;
+            background: #e3a458;
+            color: #523122;
+            border-radius: 99999px;
+            border: 1px solid #e3a458;
+            letter-spacing: -.01vw;
+            font-family: Antonio, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    &__wave{
+        position: relative;
+        background: #222123;
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
     }
 }

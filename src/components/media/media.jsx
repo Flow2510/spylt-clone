@@ -1,3 +1,4 @@
+import ReviewCard from '../reviewcard/reviewcard';
 import './media.scss';
 
 export default function Media() {
@@ -12,7 +13,23 @@ export default function Media() {
                 </div>
             </div>
             <div className='media__reviews'>
+                <h2 className='media__title'>
+                    <span className='media__title-span media__title-span--1'>What's</span>
+                    <span className='media__title-span media__title-span--2'>Everyone</span>
+                    <span className='media__title-span media__title-span--3'>Talking</span>
+                </h2>
+                <div className='media__gallery'>
+                    <button className='media__gallery-button'>Explore All</button>
+                    <div className='media__reviews-wrapper'>
 
+                    </div>
+                    <ReviewCard />  
+                    <ReviewCard />
+                    <ReviewCard />
+                </div>
+            </div>
+            <div className='media__wave'>
+                <img src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66a79692bac3e381538a3e53_melting%20bg.svg" alt="" />
             </div>
         </section>
     )
