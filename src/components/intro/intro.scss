@@ -1,0 +1,61 @@
+.intro{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #7f3b2d;
+    color: #faeade;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title{
+            font-family: "Antonio", sans-serif;
+            letter-spacing: -.4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 2.8rem;
+            line-height: 110%;
+            padding: 0 1.5rem;
+        }
+
+        &-span{
+            display: inline-block;
+
+            &--transform{
+                display: block;
+                transform: rotateZ(3deg);
+                background: #e3a458;
+                color: #7f3b2d;
+                border: 1px solid #7f3b2d;
+                justify-self: center;
+                padding: 0 0.1rem 0.3rem;
+                position: relative;
+                z-index: 10;
+            }
+
+            &:nth-child(1), &:nth-child(2){
+                transform: translateY(0.1rem);
+            }
+
+            &:nth-child(4){
+                padding: 0 2rem;
+            }
+
+            &:nth-child(4), &:nth-child(5){
+                transform: translateY(-0.7rem);
+            }
+        }
+
+        &-text{
+            max-width: 381px;
+            line-height: 160%;
+            font-size: 15px;
+            padding: 0 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
