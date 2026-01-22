@@ -1,0 +1,113 @@
+.info{
+    background-image: radial-gradient(circle, #f3ece2, #dcccb0);
+    position: relative;
+    padding: 7rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #523122;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+
+    &__wave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &__background{
+        position: absolute;
+        width: 210%;
+        bottom: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: 0;
+        left: -60%;
+    }
+
+    &__content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 270px;
+
+        p{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        font-family: "Antonio", sans-serif;
+        letter-spacing: -.4vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 3rem;
+        line-height: 110%;
+
+
+        &-span{
+            display: inline-block;
+
+            &--transform{
+                display: block;
+                transform: rotateZ(-3deg);
+                background: #a26833;
+                color: #e2d4bc;
+                border: 1px solid #e2d4bc;
+                justify-self: center;
+                padding: 0 0.1rem 0.3rem;
+                position: relative;
+                z-index: 10;
+                width: fit-content;
+            }
+
+            &:nth-child(1){
+                transform: translateY(0.1rem);
+            }
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        position: relative;
+        background: #fdebd2;
+        margin: 0 0.5rem;
+        padding: 2rem 1.5rem;
+        border-radius: 9999px;
+    }
+
+    &__informations{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        text-align: center;
+
+        &:nth-child(2){
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+
+        span{
+
+            &:nth-child(2){
+                font-size: 0.8rem;
+            }
+
+            &:nth-child(3){
+                color: #865720;
+                letter-spacing: -.05vw;
+                font-family: Antonio, sans-serif;
+                font-weight: 700;
+                line-height: 105%;
+                font-size: 1.5rem;
+                padding-top: 1rem;
+            }
+        }
+    }
+}
