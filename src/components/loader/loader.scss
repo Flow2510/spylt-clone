@@ -1,0 +1,39 @@
+.loader{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #523122;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 225px;
+    }
+
+    &__wrapper{
+        position: absolute;
+        bottom: 0;
+        padding: 1rem;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: #faeade;
+        font-size: 1.5rem;
+        font-family: "antonio", sans-serif;
+        align-items: center;
+        font-weight: 700;
+    }
+
+    &__bar{
+        width: 100%;
+        height: 1px;
+        background: #faeade2f;
+    
+        &--fill{
+            height: 100%;
+            background: #faeade;
+        }
+    }
+}

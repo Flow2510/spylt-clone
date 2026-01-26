@@ -22,7 +22,7 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--2'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+                    transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
                     Protein + Caffeine
@@ -31,7 +31,7 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--3'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+                    transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
                     Infinitely Recyclable
@@ -40,7 +40,7 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--4'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+                    transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
                     Lactose Free

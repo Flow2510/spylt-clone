@@ -1,7 +1,22 @@
+import { motion, useTransform, useScroll } from 'motion/react';
 import ReviewCard from '../reviewcard/reviewcard';
 import './media.scss';
+import { useRef } from 'react';
 
 export default function Media() {
+
+    const ref = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"],
+    });
+
+    const xRight = useTransform(scrollYProgress, [0, 1], [0, 70]);
+    const xShortRight = useTransform(scrollYProgress, [0, 1], [0, 30]);
+    const xLeft = useTransform(scrollYProgress, [0, 1], [0, -70]);
+
+
     return(
         <section className='media'>
             <div className='media__video-wrapper'>
@@ -14,9 +29,9 @@ export default function Media() {
             </div>
             <div className='media__reviews'>
                 <h2 className='media__title'>
-                    <span className='media__title-span media__title-span--1'>What's</span>
-                    <span className='media__title-span media__title-span--2'>Everyone</span>
-                    <span className='media__title-span media__title-span--3'>Talking</span>
+                    <motion.span ref={ref} style={{ x: xRight }} className='media__title-span media__title-span--1'>What's</motion.span>
+                    <motion.span ref={ref} style={{ x: xShortRight }} className='media__title-span media__title-span--2'>Everyone</motion.span>
+                    <motion.span ref={ref} style={{ x: xLeft }} className='media__title-span media__title-span--3'>Talking</motion.span>
                 </h2>
                 <div className='media__gallery'>
                     <button className='media__gallery-button'>Explore All</button>
