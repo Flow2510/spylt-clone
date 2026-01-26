@@ -14,7 +14,7 @@
 
         &-title{
             font-family: "Antonio", sans-serif;
-            letter-spacing: -.4vw;
+            letter-spacing: -.08rem;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 2.8rem;
@@ -26,7 +26,9 @@
             display: inline-block;
 
             &--transform{
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 transform: rotateZ(3deg);
                 background: #e3a458;
                 color: #7f3b2d;
@@ -35,6 +37,7 @@
                 padding: 0 0.1rem 0.3rem;
                 position: relative;
                 z-index: 10;
+                height: 60px;
             }
 
             &:nth-child(1), &:nth-child(2){

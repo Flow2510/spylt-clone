@@ -21,7 +21,8 @@
         
 
         &-span{
-            display: inline-block;letter-spacing: -.35vw;
+            display: inline-block;
+            letter-spacing: -.08rem;
 
             &--2{
                 color: #523122;
@@ -53,7 +54,7 @@
             color: #faeade;
             border-radius: 99999px;
             border: 1px solid #222123;
-            letter-spacing: -.01vw;
+            letter-spacing: -.01rem;
             font-family: "Antonio", sans-serif;
             font-weight: 700;
             text-transform: uppercase;

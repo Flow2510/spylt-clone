@@ -11,7 +11,7 @@ export default function Hero() {
     });
 
     const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 10]);
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
     return(
         <section className='hero'>
@@ -20,10 +20,19 @@ export default function Hero() {
                 style={{ rotateZ, scale }}
                 className="hero__wrapper"
             >
+                <img className='hero__background' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/677bc442e480f9dca98be8a6_Group%2051994.png" alt="" />
                 <div className='hero__content'>
                     <div className='hero__content-wrapper'>
                         <h2 className='hero__content-title'>Freaking Delicious</h2>
-                        <h3 className='hero__content-subtitle'>Protein + Caffeine</h3>
+                        <motion.h3 
+                            className='hero__content-subtitle' 
+                            initial={{ clipPath: "inset(0 50% 0 50%)" }}
+                            whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                        >
+                            Protein + Caffeine
+                        </motion.h3>
                     </div>
                     <p className='hero__content-text'>Live life to the fullest  with SPYLT: Shatter boredom and embrace your inner kid with every deliciously smooth chug.</p>
                     <button className='hero__content-button'>Chug a Spylt</button>

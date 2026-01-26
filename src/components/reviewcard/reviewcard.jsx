@@ -1,12 +1,12 @@
 import './reviewcard.scss'
 
-export default function ReviewCard() {
+export default function ReviewCard({ video, icon, name, top, rotate}) {
     return(
-        <article className='review-card'>
-            <video className='review-card__video' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F673db5c1208c8a25762bb619_1_Madison_1-transcode.mp4"></video>
+        <article className={`review-card review-card--${name}`} style={{ top: `${top}%`, transform: `rotatez(${rotate}deg)  translateY(-50%)` }}>
+            <video className='review-card__video' src={video}></video>
             <div className='review-card__content'>
-                <img src="" alt="" />
-                <p>Name Surname</p>
+                <img src={icon} alt={`avatar of ${name}`} />
+                <p>{name}</p>
             </div>
         </article>
     )

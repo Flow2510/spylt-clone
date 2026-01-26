@@ -27,7 +27,7 @@
         text-transform: uppercase;
         font-weight: 700;
         line-height: 105%;
-        letter-spacing: -1px;
+        letter-spacing: -.08rem;
         font-family: "antonio", sans-serif;
     }
 
@@ -90,10 +90,11 @@
             flex: 1;
             border: none;
             font-weight: 700;
+            outline: none;
+            color: #faeade;
 
             &::placeholder{
-                color: #faeadeb2;
-                
+                color: #faeade9d;
             }
         }
 

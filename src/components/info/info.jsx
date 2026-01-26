@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import './info.scss';
 
 export function Info() {
@@ -8,7 +9,15 @@ export function Info() {
             <div className='info__content'>
                 <h2 className='info__title'>
                     <span className='info__title-span'>It still does</span>
-                    <span className='info__title-span info__title-span--transform'>body good</span>
+                    <motion.span 
+                        className='info__title-span info__title-span--transform'
+                        initial={{ clipPath: "inset(0 100% 0 0)" }}
+                        whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true, margin: "-30% 0px -30% 0px" }}
+                    >
+                        body good
+                    </motion.span>
                 </h2>
                 <p>
                     Milk contains a wide array of

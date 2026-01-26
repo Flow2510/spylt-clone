@@ -1,16 +1,17 @@
 .review-card{
     height: 400px;
     width: 250px;
-    top: 50%;
-    transform: translateY(-50%);
     position: sticky;
     margin-bottom: 5rem;
     color: #faeade;
+    border: 2px solid #faeade;
+    border-radius: 1rem;
 
     &__video{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 1rem;
     }
 
     &__content{

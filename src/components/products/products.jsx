@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import ProductCard from '../productcard/productcard'
 import './products.scss'
 
@@ -51,7 +52,15 @@ export default function Products(){
             <div className='products__content'>
                 <h2 className='products__title'>
                     <span className='products__title-span'>We have 6</span>
-                    <span className='products__title-span products__title-span--transform'>Freaking</span>
+                    <motion.span 
+                        className='products__title-span products__title-span--transform'
+                        initial={{ clipPath: "inset(0 50% 0 50%)" }}
+                        whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
+                        viewport={{ once: true, margin: "-30% 0px -30% 0px" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                    >
+                        Freaking
+                    </motion.span>
                     <span className='products__title-span'>Delicious flavors</span>
                 </h2>
             </div>
