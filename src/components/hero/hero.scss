@@ -12,12 +12,20 @@
         height: 100%;
         object-fit: cover;
         object-position: 50% 100%;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
     }
 
     &__wrapper{
         background: #faeade;
         color: #523122;
         position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__content{
@@ -25,8 +33,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 5rem;
         position: relative;
+
+        @media screen and (min-width:768px){
+            padding-top: 6rem;
+        }
 
         &-wrapper{
             display: flex;
@@ -35,7 +47,7 @@
         }
 
         &-title{
-            font-size: 3rem;
+            font-size: 13vw;
             font-family: "antonio", sans-serif;
             text-transform: uppercase;
             letter-spacing: -.08rem;
@@ -43,18 +55,22 @@
         }
 
         &-subtitle{
-            font-size: 3rem;
+            font-size: 13vw;
             font-family: "antonio", sans-serif;
             text-transform: uppercase;
             color: #fce1cd;
             background: #a26833;
             line-height: 120%;
             padding: 0 0.2rem 0.2rem;
-            letter-spacing: -.35vw;
+            letter-spacing: -.08rem;
             border: 1px solid #fce1cd;
             transform: rotateZ(-2deg);
             white-space: nowrap;
             overflow: hidden;
+
+            @media screen and (min-width:768px){
+                padding: 0 0.2rem 0.4rem;
+            }
         }
 
         &-text{
@@ -81,5 +97,11 @@
         width: 100%;
         margin-top: 2rem;
         padding: 0 1rem;
+
+        @media screen and (min-width:768px){
+            width: 60%;
+            margin: auto;
+            padding: 0;
+        }
     }
 }

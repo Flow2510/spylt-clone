@@ -9,8 +9,16 @@
     width: 100%;
     z-index: 100;
 
+    @media screen and (min-width:768px) {
+        padding: 1.5rem 1rem;
+    }
+
     &__logo{
         width: 80px;
+
+        @media screen and (min-width:768px) {
+            width: 100px;
+        }
     }
 
     &__link{

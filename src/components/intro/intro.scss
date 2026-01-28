@@ -7,6 +7,11 @@
     background: #7f3b2d;
     color: #faeade;
 
+    @media screen and (min-width: 761px) {
+        height: auto;
+        padding: 2.5rem 0;
+    }
+
     &__content{
         display: flex;
         flex-direction: column;
@@ -17,7 +22,7 @@
             letter-spacing: -.08rem;
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 2.8rem;
+            font-size: 13vw;
             line-height: 110%;
             padding: 0 1.5rem;
         }
@@ -37,7 +42,6 @@
                 padding: 0 0.1rem 0.3rem;
                 position: relative;
                 z-index: 10;
-                height: 60px;
             }
 
             &:nth-child(1), &:nth-child(2){
@@ -54,11 +58,11 @@
         }
 
         &-text{
-            max-width: 381px;
             line-height: 160%;
             font-size: 15px;
             padding: 0 1.5rem;
             font-weight: 500;
+            max-width: 80%;
         }
     }
 }

@@ -1,11 +1,11 @@
 .review-card{
-    height: 400px;
-    width: 250px;
+    width: 67%;
     position: sticky;
     margin-bottom: 5rem;
     color: #faeade;
     border: 2px solid #faeade;
     border-radius: 1rem;
+    top: 5rem;
 
     &__video{
         width: 100%;
@@ -18,5 +18,17 @@
         position: absolute;
         bottom: 0;
         padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 500;
+        font-family: "antonio", sans-serif;
+
+        &-avatar{
+            border: 1px solid;
+            border-radius: 9999px;
+            width: 30px;
+            height: 30px;
+        }
     }
 }

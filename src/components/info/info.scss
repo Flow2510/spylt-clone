@@ -9,6 +9,10 @@
     height: 100vh;
     overflow: hidden;
 
+    @media screen and (min-width:768px){
+        padding: 8rem 2.5rem 1rem;
+    }
+
     &__wave{
         position: absolute;
         top: 0;
@@ -33,6 +37,10 @@
         gap: 2rem;
         max-width: 270px;
 
+        @media screen and (min-width:768px){
+            max-width: none;
+        }
+
         p{
             font-size: 14px;
             font-weight: 500;
@@ -47,7 +55,7 @@
         letter-spacing: -.08rem;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 3rem;
+        font-size: 13vw;
         line-height: 110%;
 
 

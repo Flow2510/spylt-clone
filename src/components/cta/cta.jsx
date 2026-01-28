@@ -12,9 +12,9 @@ export default function Cta() {
                 <motion.span 
                     className='cta__title-span cta__title-span--1'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
-                    whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    whileInView={{ clipPath: "inset(0% 0% 0 0%)" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ margin: "0px 0px -15% 0px" }}
                 >
                     Shelf Stable
                 </motion.span>
@@ -22,8 +22,8 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--2'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ margin: "0px 0px -15% 0px" }}
                 >
                     Protein + Caffeine
                 </motion.span>
@@ -31,8 +31,8 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--3'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ margin: "0px 0px -15% 0px" }}
                 >
                     Infinitely Recyclable
                 </motion.span>
@@ -40,8 +40,8 @@ export default function Cta() {
                     className='cta__title-span cta__title-span--4'
                     initial={{ clipPath: "inset(0 50% 0 50%)" }}
                     whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
-                    transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ margin: "0px 0px -15% 0px" }}
                 >
                     Lactose Free
                 </motion.span>

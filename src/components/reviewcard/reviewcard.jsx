@@ -1,13 +1,19 @@
+import { motion } from 'motion/react'
 import './reviewcard.scss'
 
-export default function ReviewCard({ video, icon, name, top, rotate}) {
+export default function ReviewCard({ video, icon, name, rotate}) {
     return(
-        <article className={`review-card review-card--${name}`} style={{ top: `${top}%`, transform: `rotatez(${rotate}deg)  translateY(-50%)` }}>
+        <motion.article 
+            className={`review-card review-card--${name}`}
+            initial={{ opacity: 0, rotateZ: rotate }}
+            whileInView={{ opacity: 1, rotateZ: rotate }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+        >
             <video className='review-card__video' src={video}></video>
             <div className='review-card__content'>
-                <img src={icon} alt={`avatar of ${name}`} />
-                <p>{name}</p>
+                <img className='review-card__content-avatar' src={icon} alt={`avatar of ${name}`} />
+                <p className='review-card__content-text'>{name}</p>
             </div>
-        </article>
+        </motion.article>
     )
 }

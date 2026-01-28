@@ -5,4 +5,12 @@
 
 html{
   font-family: "montserrat", sans-serif;
+
+  @media screen and (min-width:761px){
+    font-size: 18px;
+  }
+
+  @media screen and (min-width:1200px){
+    font-size: 20px;
+  }
 }

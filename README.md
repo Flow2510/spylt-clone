@@ -2,7 +2,7 @@ UI clone du site Spylt Milk (Awwwards winner), réalisé dans un but éducatif a
 
 Projet non-officiel — aucune affiliation avec Spylt Milk.
 
-Projet en cours
+Projet en cours, design uniquement en mobile a 375px. 
 
 ✨ Focus
 
