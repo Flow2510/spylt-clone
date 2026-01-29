@@ -26,6 +26,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
+        transform-origin: bottom left;
     }
 
     &__content{

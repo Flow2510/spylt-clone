@@ -11,7 +11,7 @@ export default function Hero() {
     });
 
     const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 10]);
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
 
     const text = "Freaking Delicious";
     const letters = text.split("");

@@ -19,13 +19,13 @@ export function Info() {
                         body good
                     </motion.span>
                 </h2>
-                <p>
+                <p className='info__content-text'>
                     Milk contains a wide array of
                     nutrients, including vitamins, minerals,
                     and protein, and this is lactose free
                 </p>
             </div>
-            <div className='info__wrapper'>
+            <div className='info__wrapper info__wrapper--mobile'>
                 <div className='info__informations'>
                     <p className='info__informations-text'>Vitamin A</p>
                     <span className='info__informations-span'>up to</span>
@@ -40,6 +40,33 @@ export function Info() {
                     <p className='info__informations-text'>Vitamin D</p>
                     <span className='info__informations-span'>up to</span>
                     <span className='info__informations-span'>5mcg</span>
+                </div>
+            </div>
+            <div className='info__wrapper info__wrapper--desktop'>
+                <div className='info__informations'>
+                    <p className='info__informations-text'>Potassium</p>
+                    <span className='info__informations-span'>up to</span>
+                    <span className='info__informations-span'>245mg</span>
+                </div>
+                <div className='info__informations'>
+                    <p className='info__informations-text'>Calcium</p>
+                    <span className='info__informations-span'>up to</span>
+                    <span className='info__informations-span'>500mg</span>
+                </div>
+                <div className='info__informations'>
+                    <p className='info__informations-text'>Vitamin A</p>
+                    <span className='info__informations-span'>up to</span>
+                    <span className='info__informations-span'>176mcg</span>
+                </div>
+                <div className='info__informations'>
+                    <p className='info__informations-text'>Vitamin D</p>
+                    <span className='info__informations-span'>up to</span>
+                    <span className='info__informations-span'>5mcg</span>
+                </div>
+                <div className='info__informations'>
+                    <p className='info__informations-text'>Iron</p>
+                    <span className='info__informations-span'>up to</span>
+                    <span className='info__informations-span'>1mg</span>
                 </div>
             </div>
         </section>
