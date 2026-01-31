@@ -1,3 +1,4 @@
+import AnimatedText from '../animatedtext/animatedtext';
 import './footer.scss';
 
 export default function Footer() {
@@ -9,7 +10,11 @@ export default function Footer() {
         <footer className='footer'>
             <img src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/677bd1bf601d3d085c4c2bf3_image%201834.png" className='footer__background' alt="" />
             <div className='footer__title-wrapper'>
-                <h2 className='footer__title'>#Chugresponsibly</h2>
+                <h2 className='footer__title'>
+                    <AnimatedText 
+                        text={"#CHUGRESPONSIBLY"}
+                    />
+                </h2>
                 <div className='footer__social'>
                     <a className='footer__social-link' href="#">
                         <img src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66a79d28cb8a1d28dd93cc2a_youtube-logo.svg" alt="" />

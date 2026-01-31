@@ -5,9 +5,10 @@ export default function ReviewCard({ video, icon, name, rotate}) {
     return(
         <motion.article 
             className={`review-card review-card--${name}`}
-            initial={{ opacity: 0, rotateZ: rotate }}
-            whileInView={{ opacity: 1, rotateZ: rotate }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ opacity: 0, rotateZ: rotate, y: 500}}
+            whileInView={{ opacity: 1, rotateZ: rotate, y: 0}}
+            viewport={{ once:false, amount: 0}}
+            transition={{ duration: 0.7, ease: "easeOut" }}
         >
             <video className='review-card__video' src={video}></video>
             <div className='review-card__content'>

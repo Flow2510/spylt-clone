@@ -1,6 +1,7 @@
 import './hero.scss';
 import {  motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import AnimatedText from '../animatedtext/animatedtext';
 
 export default function Hero() {
     const ref = useRef(null);
@@ -13,31 +14,6 @@ export default function Hero() {
     const rotateZ = useTransform(scrollYProgress, [0, 1], [0, 10]);
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
 
-    const text = "Freaking Delicious";
-    const letters = text.split("");
-    const container = {
-        hidden: {},
-        visible: {
-            transition:{
-                staggerChildren: 0.05,
-            },
-        },
-    };
-    const letter = {
-        hidden : {
-            opacity: 0,
-            y: "3rem",
-        },
-        visible: {
-            opacity: 1,
-            y: "0rem",
-            transition: {
-                duration: 0.3,
-                ease: "easeOut",
-            },
-        },
-    };
-
     return(
         <section className='hero'>
             <motion.div
@@ -48,22 +24,11 @@ export default function Hero() {
                 <img className='hero__background' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/677bc442e480f9dca98be8a6_Group%2051994.png" alt="" />
                 <div className='hero__content'>
                     <div className='hero__content-wrapper'>
-                        <motion.h2 
-                            className='hero__content-title'
-                            variants={container}
-                            initial="hidden"
-                            animate="visible"
-                        >
-                            {letters.map((char, i) => (
-                                <motion.span
-                                    key={i}
-                                    variants={letter}
-                                    style={{ display: "inline-block" }}
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
-                            ))}
-                        </motion.h2>
+                        <h2 className='hero__content-title'>
+                            <AnimatedText 
+                                text={"FREAKING DELICIOUS"}
+                            />
+                        </h2>
                         <motion.h3 
                             className='hero__content-subtitle' 
                             initial={{ clipPath: "inset(0 50% 0 50%)" }}
