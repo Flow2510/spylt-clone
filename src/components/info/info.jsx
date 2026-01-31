@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import './info.scss';
+import AnimatedText from '../animatedtext/animatedtext';
 
 export function Info() {
     return(
@@ -8,7 +9,9 @@ export function Info() {
             <img className='info__background' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/66f680a53c9d01623c840586_66ba173c3434647ad01ee996_14856267915%20123123%201-p-800.webp" alt="" />
             <div className='info__content'>
                 <h2 className='info__title'>
-                    <span className='info__title-span'>It still does</span>
+                    <AnimatedText 
+                        text={"It still does"}
+                    />
                     <motion.span 
                         className='info__title-span info__title-span--transform'
                         initial={{ clipPath: "inset(0 100% 0 0)" }}

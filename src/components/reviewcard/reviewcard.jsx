@@ -7,7 +7,7 @@ export default function ReviewCard({ video, icon, name, rotate}) {
             className={`review-card review-card--${name}`}
             initial={{ opacity: 0, rotateZ: rotate }}
             whileInView={{ opacity: 1, rotateZ: rotate }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut" }}
         >
             <video className='review-card__video' src={video}></video>
             <div className='review-card__content'>

@@ -1,12 +1,15 @@
 import { motion } from 'motion/react'
 import './map.scss'
+import AnimatedText from '../animatedtext/animatedtext'
 
 export default function Map() {
     return(
         <section className="map">
             <div className='map__content'>
                 <h2 className='map__title'>
-                    <span className='map__title-span map__title-span--1'>Right Around</span>
+                    <AnimatedText
+                        text={"Right Around"}
+                    />
                     <motion.span 
                         className='map__title-span map__title-span--2'
                         initial={{ clipPath: "inset(0 100% 0 0)" }}

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import ProductCard from '../productcard/productcard'
 import './products.scss'
+import AnimatedText from '../animatedtext/animatedtext'
 
 export default function Products(){
     const flavors = [
@@ -51,7 +52,9 @@ export default function Products(){
             </div>
             <div className='products__content'>
                 <h2 className='products__title'>
-                    <span className='products__title-span'>We have 6</span>
+                    <AnimatedText 
+                        text={"We have 6"}
+                    />
                     <motion.span 
                         className='products__title-span products__title-span--transform'
                         initial={{ clipPath: "inset(0 50% 0 50%)" }}
@@ -61,7 +64,9 @@ export default function Products(){
                     >
                         Freaking
                     </motion.span>
-                    <span className='products__title-span'>Delicious flavors</span>
+                    <AnimatedText 
+                        text={"Delicious flavors"}
+                    />
                 </h2>
             </div>
             <div className='products__gallery'>
