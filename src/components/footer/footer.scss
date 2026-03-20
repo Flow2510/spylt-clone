@@ -13,6 +13,8 @@
 
     @media screen and (min-width:768px){
         align-items: start;
+        gap: 4rem;
+        padding: 3.8rem 1rem 1rem;
     }
 
     &__background{
@@ -135,7 +137,7 @@
         @media screen and (min-width:768px){
             position: absolute;
             right: 1rem;
-            bottom: 3.8rem;
+            bottom: 1rem;
             color: #faeadead;
         }
     }

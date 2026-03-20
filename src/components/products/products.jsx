@@ -1,7 +1,8 @@
-import { motion } from 'motion/react'
+import { motion, useScroll, useTransform } from 'motion/react'
 import ProductCard from '../productcard/productcard'
 import './products.scss'
 import AnimatedText from '../animatedtext/animatedtext'
+import { useRef } from 'react';
 
 export default function Products(){
     const flavors = [
@@ -42,6 +43,17 @@ export default function Products(){
             title: "Max Chocolate Milk"
         }
     ]
+    
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start start", "end end"]
+    })
+
+    const WIDTH =  750
+    const GAP = 18
+    const distance = ((WIDTH + GAP) * flavors.length) - (WIDTH / 2)
+    const x = useTransform(scrollYProgress, [0, 1], ["0", `-${distance}px`])
 
     return(
         <section className='products'>
@@ -70,14 +82,30 @@ export default function Products(){
                 </h2>
             </div>
             <div className='products__gallery'>
-                {flavors.map((flavor) => (
+                {flavors.map((flavor, index) => (
                     <ProductCard 
+                        key={flavor.title + index}
                         background={flavor.background}
                         back={flavor.back}
                         bottle={flavor.bottle}
                         title={flavor.title}
                     />
                 ))}
+            </div>
+            <div className='product-desktop' ref={containerRef}>
+                <div className='product-desktop__sticky'>
+                    <motion.div className='product-desktop__gallery' style={{ x }}>
+                        {flavors.map((flavor, index) => (
+                            <ProductCard 
+                                key={flavor.title + index}
+                                background={flavor.background}
+                                back={flavor.back}
+                                bottle={flavor.bottle}
+                                title={flavor.title}
+                            />
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </section>
     )

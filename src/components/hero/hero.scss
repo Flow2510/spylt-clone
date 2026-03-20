@@ -18,16 +18,37 @@
         }
     }
 
+    &__video{
+        display: none;
+
+        @media screen and (min-width:1200px) {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     &__wrapper{
         background: #faeade;
         color: #523122;
         position: relative;
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         overflow: hidden;
         transform-origin: bottom left;
+
+        @media screen and (min-width:1200px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__content{
@@ -42,6 +63,11 @@
             padding-top: 6rem;
         }
 
+        @media screen and (min-width:1200px){
+            gap: 2rem;
+            padding-top: 0;
+        }
+
         &-wrapper{
             display: flex;
             flex-direction: column;
@@ -54,6 +80,11 @@
             text-transform: uppercase;
             letter-spacing: -.08rem;
             line-height: 100%;
+
+            @media screen and (min-width:1200px){
+                font-size: 7.8vw;
+                letter-spacing: -.35vw;
+            }
         }
 
         &-subtitle{
@@ -65,7 +96,7 @@
             line-height: 120%;
             padding: 0 0.2rem 0.2rem;
             letter-spacing: -.08rem;
-            border: 1px solid #fce1cd;
+            border: .5vw solid #fce1cd;
             transform: rotateZ(-2deg);
             white-space: nowrap;
             overflow: hidden;
@@ -73,13 +104,25 @@
             @media screen and (min-width:768px){
                 padding: 0 0.2rem 0.4rem;
             }
+
+            @media screen and (min-width:1200px){
+                font-size: 7.8vw;
+                padding: 0 0.2rem 0.9rem;
+                letter-spacing: -.35vw;
+            }
         }
 
         &-text{
             width: 80%;
             padding: 2rem 0;
             line-height: 120%;
-            font-weight: 400;
+            font-weight: 500;
+
+            @media screen and (min-width:1200px){
+                width: 28vw;
+                padding: 0;
+                font-size: 15px;
+            }
         }
 
         &-button{
@@ -104,6 +147,10 @@
             width: 60%;
             margin: auto;
             padding: 0;
+        }
+
+        @media screen and (min-width:1200px){
+            display: none;
         }
     }
 }

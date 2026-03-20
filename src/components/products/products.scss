@@ -1,6 +1,5 @@
 .products{
     background: #faeade;
-    padding: 0 1rem 1rem 1rem;
     color: #523122;
     position: relative;
 
@@ -49,7 +48,7 @@
                 transform: rotateZ(-3deg);
                 background: #a26833;
                 color: #faeade;
-                border: 1px solid #faeade;
+                border: 0.5vw solid #fce1cd;
                 justify-self: center;
                 padding: 0 0.1rem 0.3rem;
                 position: relative;
@@ -59,40 +58,82 @@
 
             &:nth-child(1){
                 transform: translateY(0.1rem);
+                transform-origin: center;
             }
 
             &:nth-child(3){
                 transform: translateY(-0.7rem);
+                transform-origin: center;
             }
         }
     }
 
     &__gallery{
-        padding-bottom: 5rem;
+        padding: 4rem 1rem 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 3rem;
         max-width: 700px;
         margin: 0 auto;
 
-        @media screen and (min-width:768px){
-            padding-bottom: 8rem;
+        @media screen and (min-width:900px) {
+            display: none;
         }
 
         .product-card:nth-child(odd){
 
-            @media screen and (min-width:768px) {
+            @media screen and (min-width:500px) {
                 transform: rotateZ(-5deg);
             }
         }
 
         .product-card:nth-child(even){
 
-            @media screen and (min-width:768px) {
+            @media screen and (min-width:500px) {
                 transform: rotateZ(5deg);
             }
         }
+    }
+}
+
+.product-desktop{
+    display: none;
+
+    @media screen and (min-width:900px) {
+        position: relative;
+        height: 400vh;
+        width: 100%;
+        display: block;
+        
+    }
+
+    &__sticky{
+        position: sticky;
+        display: flex;
+        width: 100%;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    &__gallery{
+        display: flex;
+        padding: 5rem 2rem 8rem;
+        gap: 6rem;
+
+        .product-card:nth-child(odd){
+
+            @media screen and (min-width:500px) {
+                transform: rotateZ(-5deg);
+            }
+        }
+
+        .product-card:nth-child(even){
+            @media screen and (min-width:500px) {
+                transform: rotateZ(5deg);
+            }
+        }
+
     }
 }

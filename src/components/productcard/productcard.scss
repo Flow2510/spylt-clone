@@ -1,60 +1,86 @@
 .product-card{
     position: relative;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: bottom;
     height: 350px;
     width: 100%;
-    overflow: hidden;
-    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-    @media screen and (min-width:768px){
-        max-width: 800px;
-        height: 786px;
+    @media screen and (min-width: 500px) {
+        height: 450px;
     }
 
-    &__background{
-        position: absolute;
-        width: 100%;
-        max-height: 80%;
-        bottom: 0;
-        left: 0;
-        display: block;
-        object-fit: cover;
-        border-radius: 1.5rem;
-    }
-
-    &__back{
-        width: 100%;
-        position: absolute;
-        bottom: 3rem;
-        left: 0;
-        display: block;
-        padding: 0 1rem;
-        max-height: 80%;
+    @media screen and (min-width: 900px) {
+        height: 700px;
+        width: 750px;
     }
 
     &__bottle{
-        position: relative;
-        transform: translateY(1.8rem);
-        display: block;
-        margin: 0 auto;
-        object-fit: contain;
+        position: absolute;
+        height: 350px;
         width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        
+        @media screen and (min-width: 500px) {
+            height: 450px;
+        }
+
+        @media screen and (min-width: 900px) {
+            height: 700px;
+        }
+    }
+
+    &__ingredient{
+        height: 260px;
+        width: 100%;
+        position: absolute;
+        bottom: 40px;
+        background-size: contain;
+
+        @media screen and (min-width: 500px) {
+            height: 360px;
+        }
+
+        @media screen and (min-width: 900px) {
+            height: 450px;
+            bottom: 80px;
+        }
+    }
+
+    &__background{
+        height: 270px;
+        width: 100%;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+
+        @media screen and (min-width: 500px) {
+            height: 360px;
+            border-radius: 2rem;
+        }
+
+        @media screen and (min-width: 900px) {
+            height: 500px;
+        }
     }
 
     &__title{
-        position: absolute;
-        bottom: 0;
-        left: 0;
         padding: 1rem;
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-family: "antonio", sans-serif;
         letter-spacing: -0.01rem;
         text-transform: uppercase;
         font-weight: 700;
         line-height: 105%;
         color: #faeade;
+        position: relative;
+
+        @media screen and (min-width: 900px) {
+            font-size: 3rem;
+            padding: 1.5rem;
+        }
     }
 }

@@ -12,7 +12,7 @@ import Products from './components/products/products'
 import Loader from './components/loader/loader'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const valueRef = useRef(0);
   const elRef = useRef(null);
 
@@ -28,7 +28,7 @@ function App() {
         clearInterval(interval);
         setIsLoading(false);
       }
-    }, 33);
+    }, 25);
 
     return () => clearInterval(interval);
   }, []);

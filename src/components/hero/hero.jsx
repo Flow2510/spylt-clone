@@ -21,6 +21,7 @@ export default function Hero() {
                 style={{ rotateZ, scale }}
                 className="hero__wrapper"
             >
+                <video muted autoPlay className='hero__video' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2%2F66ceef357d683ae03c80a20d_!!!hero_animation-transcode.mp4"></video>
                 <img className='hero__background' src="https://cdn.prod.website-files.com/669a8d6498ba88c08dfd2cd2/677bc442e480f9dca98be8a6_Group%2051994.png" alt="" />
                 <div className='hero__content'>
                     <div className='hero__content-wrapper'>
@@ -45,7 +46,7 @@ export default function Hero() {
                         whileInView={{ opacity: 1, y:0 }}
                         transition={{ duration: 0.4, delay: 0.2}}    
                     >
-                        Live life to the fullest  with SPYLT: Shatter boredom and embrace your inner kid with every deliciously smooth chug.
+                        Live life to the fullest with SPYLT: Shatter boredom and embrace your inner kid with every deliciously smooth chug.
                     </motion.p>
                     <motion.button 
                         className='hero__content-button'
