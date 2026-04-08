@@ -21,8 +21,9 @@ Motion
 SCSS
 
 🚀 Setup
-npm install
-npm run dev
+
+yarn install
+yarn run dev
 
 
 ➡️ http://localhost:5173
