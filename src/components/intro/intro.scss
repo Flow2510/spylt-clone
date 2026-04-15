@@ -41,6 +41,7 @@
 
         &-span{
             display: inline-block;
+            margin: 0 0.4rem;
 
             &--transform{
                 display: flex;
@@ -82,4 +83,8 @@
             }   
         }
     }
+}
+
+.intro__word {
+  display: inline-block;
 }

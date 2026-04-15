@@ -1,13 +1,23 @@
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import './intro.scss';
+import { useRef } from 'react';
 
 export default function Intro() {
+    const ref = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start 60%", "start 20%"]
+    })
+
+    const color = useTransform(scrollYProgress, [0, 1], ["#faeade80", "#faeade"])
+
     return(
         <section className='intro'>
             <div className='intro__content'>
-                <h2 className='intro__content-title'>
-                    <span className='intro__content-span'>Stir up your </span>
-                    <span className='intro__content-span'>fearless past and </span>
+                <h2 className='intro__content-title'ref={ref}>
+                    <motion.span style={{ color }} className='intro__content-span'>Stir up your</motion.span>
+                    <motion.span style={{ color }} className='intro__content-span'>fearless past and </motion.span>
                     <motion.span 
                         className='intro__content-span intro__content-span--transform'
                         initial={{ clipPath: "inset(0 0 0 100%)" }}
@@ -17,8 +27,8 @@ export default function Intro() {
                     >
                         Fuel up
                     </motion.span>
-                    <span className='intro__content-span'>your future with every </span>
-                    <span className='intro__content-span'>gulp of Perfect Protein </span>
+                    <motion.span style={{ color }} className='intro__content-span'>your future with every </motion.span>
+                    <motion.span style={{ color }} className='intro__content-span'>gulp of Perfect Protein </motion.span>
                 </h2>
                 <p className='intro__content-text'>
                     Rev up your rebel spirit and feed the adventure of life with SPYLT, where you’re one chug away from epic nostalgia and fearless fun.
